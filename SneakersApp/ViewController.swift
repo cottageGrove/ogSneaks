@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var sneakerListingTableViewController : SneakerListingsViewController?
     
     
+    //added a new line 
+    
     var cSneakers = [CodableSneaker]()
 //    var imageUploadViewController : ImageUploadViewController?
 
