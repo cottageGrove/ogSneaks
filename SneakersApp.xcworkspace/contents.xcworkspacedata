@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:SneakerImageMO+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:SneakerImageMO+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:SneakerModelMO+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:SneakerModelMO+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:SneakersApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

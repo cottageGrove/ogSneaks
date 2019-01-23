@@ -1,0 +1,26 @@
+PODS:
+  - AWSCognito (2.8.4):
+    - AWSCore (= 2.8.4)
+  - AWSCore (2.8.4)
+  - AWSS3 (2.8.4):
+    - AWSCore (= 2.8.4)
+
+DEPENDENCIES:
+  - AWSCognito
+  - AWSCore
+  - AWSS3
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AWSCognito
+    - AWSCore
+    - AWSS3
+
+SPEC CHECKSUMS:
+  AWSCognito: d7f7e9aaa26f163fe2d32114e28f59fa5d996805
+  AWSCore: 734b0d67c2c77f6edae9e5520431a37310ea4193
+  AWSS3: ead679e0887fa3ca8dddd054643a197b55360f1f
+
+PODFILE CHECKSUM: 2535c46b7683da8eff77c5caa62b10b603d0264b
+
+COCOAPODS: 1.5.0

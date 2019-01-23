@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="tSB-3N-Wpc" customClass="ListedSneakerCell" customModule="SneakersApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="496" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tSB-3N-Wpc" id="Jyu-PL-V1f">
+                <rect key="frame" x="0.0" y="0.0" width="496" height="145.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ttf-lR-OiH">
+                        <rect key="frame" x="20" y="26" width="94" height="94"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="94" id="KBf-Q7-c88"/>
+                            <constraint firstAttribute="height" constant="94" id="hvp-51-5Qz"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="NFJ-CA-vsO">
+                        <rect key="frame" x="133" y="23" width="230" height="99.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sneaker Model Label " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tl6-tu-z8w">
+                                <rect key="frame" x="0.0" y="0.0" width="159" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-g3-nTq">
+                                <rect key="frame" x="0.0" y="22.5" width="101" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-pI-PiW">
+                                <rect key="frame" x="0.0" y="42.5" width="72" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g4-Tj-Vee">
+                                <rect key="frame" x="0.0" y="62.5" width="67.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fa-z6-k0C">
+                                <rect key="frame" x="0.0" y="82.5" width="66" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="230" id="JrF-0k-a88"/>
+                            <constraint firstAttribute="height" constant="99.5" id="fzh-uW-8T7"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NFJ-CA-vsO" firstAttribute="leading" secondItem="Ttf-lR-OiH" secondAttribute="trailing" constant="19" id="0oG-dY-LRd"/>
+                    <constraint firstItem="Ttf-lR-OiH" firstAttribute="leading" secondItem="Jyu-PL-V1f" secondAttribute="leading" constant="20" id="Elh-az-h87"/>
+                    <constraint firstAttribute="bottom" secondItem="NFJ-CA-vsO" secondAttribute="bottom" constant="23" id="I9a-8f-Wa6"/>
+                    <constraint firstItem="NFJ-CA-vsO" firstAttribute="top" secondItem="Jyu-PL-V1f" secondAttribute="top" constant="23" id="dOo-Bh-qqs"/>
+                    <constraint firstItem="Ttf-lR-OiH" firstAttribute="top" secondItem="Jyu-PL-V1f" secondAttribute="top" constant="26" id="rsd-vk-K3i"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="PEv-R2-LyM"/>
+            <connections>
+                <outlet property="conditionLabel" destination="0t0-g3-nTq" id="6x7-yY-Yxe"/>
+                <outlet property="priceLabel" destination="jPV-pI-PiW" id="OmK-ON-ZPB"/>
+                <outlet property="sizeLabel" destination="5Fa-z6-k0C" id="ovb-ZL-fpg"/>
+                <outlet property="sneakerImageThumbnail" destination="Ttf-lR-OiH" id="MY2-wb-JIf"/>
+                <outlet property="sneakerModelLabel" destination="Tl6-tu-z8w" id="4Ja-yY-yqt"/>
+                <outlet property="yearLabel" destination="7g4-Tj-Vee" id="tDg-Fi-Znr"/>
+            </connections>
+            <point key="canvasLocation" x="278.39999999999998" y="199.70014992503749"/>
+        </tableViewCell>
+    </objects>
+</document>
