@@ -141,14 +141,16 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
             DispatchQueue.main.async {
                 self.sneakerImagesViewController?.sneakerImageUrls = sneakerImages
                 self.sneakerImagesViewController?.updateData()
+                self.sneakerImagesViewController?.downloadImages()
             }
 
 
         }
         
 
-        
+
         self.navigationController?.pushViewController(self.sneakerImagesViewController!, animated: true)
+        
                 
     
     }
@@ -177,11 +179,7 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
             }).resume()
         
         }
-        
 
-
-
-        
     }
     
     func setupTableView() {

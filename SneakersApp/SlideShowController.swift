@@ -18,6 +18,7 @@ class SlideShowController: UIPageViewController, UIPageViewControllerDataSource{
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let itemController = viewController as! SlideController
         
+        
         if itemController.itemIndex! > 0 {
             
             let previousController = SlideController()
@@ -81,12 +82,15 @@ class SlideShowController: UIPageViewController, UIPageViewControllerDataSource{
         
         
         slideController.itemIndex = 0
-        
+    
+        //MIGHT BE CRUCIAL TO KNOW THIS
+        //I've been having errors with this!
         slideController.image = self.images[startIndex]
         
         
         setViewControllers([slideController], direction: .forward, animated: false, completion: nil)
     }
+    
 
 }
 

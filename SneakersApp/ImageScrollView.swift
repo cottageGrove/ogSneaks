@@ -74,6 +74,7 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.contentView?.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.contentView?.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
+        guard let imageView = self.imageView else {return}
         self.contentView?.addSubview(self.imageView!)
         
 
@@ -86,7 +87,7 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         let offsetX: CGFloat = max((self.bounds.size.width - self.contentSize.width) * 0.5, 0.0)
         let offsetY: CGFloat = max((self.bounds.size.height - self.contentSize.height) * 0.5, 0.0)
         
-        guard let imageView = self.imageView else {return}
+
         
         imageView.center = CGPoint(x: self.contentSize.width * 0.5 + offsetX, y: self.contentSize.height * 0.5 + offsetY)
         

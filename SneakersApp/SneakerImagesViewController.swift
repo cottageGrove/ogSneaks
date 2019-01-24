@@ -23,6 +23,7 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     var sneakerImageIndex: Int?
     
     var sneakerImageUrls = [CodableSneakerImage]()
+
     
     var delegate : SneakerGalleryDelegate?
     
@@ -34,8 +35,19 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
         collectionView.backgroundColor = .white
 
         setupImageDetailView()
+        
+        downloadImages()
     }
     
+    
+    func downloadImages() {
+        convertUrlsToImages { (images) in
+            print("Are we getting in here")
+            self.images = images
+            
+            print("Download Images \(self.images)")
+        }
+    }
     
     
     
@@ -78,13 +90,18 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
 //        self.navigationController?.pushViewController(pageController!, animated: true)
         
 //        let slideShowController = SlideShowController()
-        let slideShowController = SlideShowController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+//        let slideShowController = SlideShowController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+//
+//        slideShowController.images = images
         
-        slideShowController.images = images
+        var slideShowController = SlideShowController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+
+        slideShowController.images = self.images
         
+        
+//        slideShowController.updateImages(images: self.images)
         self.navigationController?.pushViewController(slideShowController, animated: true)
-        
-        
+
     }
     
     
@@ -109,6 +126,7 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     
     override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: layout)
+
 
     }
     
@@ -212,11 +230,37 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     
     
     public func getSneakerImages() {
+        
         self.delegate?.getSneakerImage(images: self.images)
     }
     
     func removeAllSneakers() {
         self.images.removeAll()
+    }
+    
+    func convertUrlsToImages(completionHandler: @escaping ([UIImage])->()) {
+        
+        var images = [UIImage]()
+        
+        for sneaker in sneakerImageUrls {
+            
+            guard let imageURL = sneaker.image_url else {return print("No sneaker images exist")}
+            
+            guard let url = URL(string: imageURL) else {return print("Could not convert imageURL to url that request data from endpoint")}
+            
+            
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
+                guard let data = data else {return}
+                guard let image = UIImage(data: data) else {return}
+                images.append(image)
+                
+                print("images: ", images)
+                completionHandler(images)
+                
+            }).resume()
+            
+        }
+        
     }
     
     
