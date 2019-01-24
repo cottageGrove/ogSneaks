@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 
+
 class SneakerListingsViewController : UITableViewController, UISearchBarDelegate {
     
     fileprivate let cellId = "cellId"
@@ -23,8 +24,7 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
 //    var listedSneakers = [CodableSneaker]()
     
 //    var listedSneakers : [CodableSneaker]! {
-//        didSet{
-//            updateSneakerTable()
+    //        didvar{var            updateSneakerTable()
 //        }
 //    }
     
@@ -112,26 +112,41 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
         
         guard let id = sneaker.id else {return}
         
+//        NetworkLayer.shared.fetchSneakerImages(sneakerId: id) { (sneakerImages) in
+//
+//            print("This is whats returned from sneaker Images.... \(sneakerImages)")
+//
+//            //this is important since sneakerImages is passed into the completionhandler
+//            self.sneakerImages = sneakerImages
+//
+//            self.convertUrlsToImages { (images) in
+//                print("Converted urls to uiimages: ", images)
+//                //            self.sneakerImagesViewController?.images = images
+//
+//
+//                DispatchQueue.main.async {
+//                    self.sneakerImagesViewController?.images = images
+//                }
+//
+//                self.sneakerImagesViewController?.updateData()
+//            }
+//
+//        }
+        
         NetworkLayer.shared.fetchSneakerImages(sneakerId: id) { (sneakerImages) in
             
-            print("This is whats returned from sneaker Images.... \(sneakerImages)")
-            
-            //this is important since sneakerImages is passed into the completionhandler
+            print("This is whats returned from sneaker images... \(sneakerImages)")
             self.sneakerImages = sneakerImages
             
-            self.convertUrlsToImages { (images) in
-                print("Converted urls to uiimages: ", images)
-                //            self.sneakerImagesViewController?.images = images
-                
-                
-                DispatchQueue.main.async {
-                    self.sneakerImagesViewController?.images = images
-                }
-                
+            DispatchQueue.main.async {
+                self.sneakerImagesViewController?.sneakerImageUrls = sneakerImages
                 self.sneakerImagesViewController?.updateData()
             }
-            
+
+
         }
+        
+
         
         self.navigationController?.pushViewController(self.sneakerImagesViewController!, animated: true)
                 
@@ -150,6 +165,7 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
             guard let url = URL(string: imageURL) else {return print("Could not convert imageURL to url that request data from endpoint")}
             
             
+        
             URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 guard let data = data else {return}
                 guard let image = UIImage(data: data) else {return}

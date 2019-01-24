@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ListedSneakerCell: UITableViewCell {
 
@@ -35,23 +36,24 @@ class ListedSneakerCell: UITableViewCell {
             guard let thumbnailURL = sneakerModel.image_url else {return}
             
             guard let url = URL(string: thumbnailURL) else {return}
-
-//            if let dataImage = try? Data(contentsOf: url) {
-//                let image = UIImage(data: dataImage)
-//                sneakerImageThumbnail.image = image
-//                self.sneakerImageThumbnail.contentMode = .scaleAspectFit
-//            }
             
-            URLSession.shared.dataTask(with: url) { (data, _, _) in
-
-                guard let data = data else {return}
-
-                DispatchQueue.main.async {
-                    self.sneakerImageThumbnail.image = UIImage(data: data)
-                    self.sneakerImageThumbnail.contentMode = .scaleAspectFit
-                }
-
-            }.resume()
+            
+            
+            self.sneakerImageThumbnail.sd_setImage(with: url, completed: nil)
+            self.sneakerImageThumbnail.contentMode = .scaleAspectFit
+            
+            
+//            URLSession.shared.dataTask(with: url) { (data, _, _) in
+//
+//                guard let data = data else {return}
+//
+//                DispatchQueue.main.async {
+//
+//                    self.sneakerImageThumbnail.image = UIImage(data: data)
+//                    self.sneakerImageThumbnail.contentMode = .scaleAspectFit
+//                }
+//
+//            }.resume()
             
         }
         

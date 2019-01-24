@@ -9,6 +9,7 @@ target 'SneakersApp' do
     pod 'AWSCore'
     pod 'AWSCognito'
     pod 'AWSS3'	
+    pod 'SDWebImage', '~> 4.0'
 
 
 end

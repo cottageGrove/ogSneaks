@@ -7,14 +7,13 @@
 //
 
 import UIKit
-
-
-
+import SDWebImage
 
 class SneakerImageCell: UICollectionViewCell {
 
     
     @IBOutlet weak var sneakerImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,11 +21,26 @@ class SneakerImageCell: UICollectionViewCell {
     }
     
     
-    var sneakerImage: UIImage! {
+//    var sneakerImage: UIImage! {
+//        didSet {
+//
+//            sneakerImageView.contentMode = .scaleAspectFit
+//
+//            guard let compressedData = sneakerImage.jpegData(compressionQuality: 0.05) else {return}
+//            sneakerImageView.image = UIImage(data: compressedData)
+//        }
+//    }
+    
+    var codableSneakerImage : CodableSneakerImage! {
+        
         didSet {
+            print("Are we entering the codableImageURL???")
+            self.sneakerImageView.contentMode = .scaleAspectFit
             
-            sneakerImageView.contentMode = .scaleAspectFit
-            sneakerImageView.image = sneakerImage
+            guard let imageUrl = codableSneakerImage.image_url else {return}
+            
+            guard let url = URL(string: imageUrl) else {return}
+            self.sneakerImageView.sd_setImage(with: url, completed: nil)
         }
     }
     

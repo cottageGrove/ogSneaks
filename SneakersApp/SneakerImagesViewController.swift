@@ -22,6 +22,8 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     fileprivate let itemsPerRow :CGFloat = 3
     var sneakerImageIndex: Int?
     
+    var sneakerImageUrls = [CodableSneakerImage]()
+    
     var delegate : SneakerGalleryDelegate?
     
     override func viewDidLoad() {
@@ -121,9 +123,18 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! SneakerImageCell
-        let sneakerImage = self.images[indexPath.row]
-        cell.sneakerImage = sneakerImage
-
+        
+//        let sneakerImage = self.images[indexPath.row]
+//        cell.sneakerImage = sneakerImage
+//
+        
+        let codableSneakerImageUrl = self.sneakerImageUrls[indexPath.row]
+        
+ 
+        
+        
+        print("This is the image url \(codableSneakerImageUrl.image_url)")
+        cell.codableSneakerImage = codableSneakerImageUrl
         
         return cell
     }
@@ -161,7 +172,9 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        
+        return sneakerImageUrls.count
+//        return images.count
     }
     
     

@@ -4,23 +4,29 @@ PODS:
   - AWSCore (2.8.4)
   - AWSS3 (2.8.4):
     - AWSCore (= 2.8.4)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
 
 DEPENDENCIES:
   - AWSCognito
   - AWSCore
   - AWSS3
+  - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AWSCognito
     - AWSCore
     - AWSS3
+    - SDWebImage
 
 SPEC CHECKSUMS:
   AWSCognito: d7f7e9aaa26f163fe2d32114e28f59fa5d996805
   AWSCore: 734b0d67c2c77f6edae9e5520431a37310ea4193
   AWSS3: ead679e0887fa3ca8dddd054643a197b55360f1f
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
 
-PODFILE CHECKSUM: 2535c46b7683da8eff77c5caa62b10b603d0264b
+PODFILE CHECKSUM: caf6df7ffad67aa8e743f5d9f2ff6b6ad1da2332
 
 COCOAPODS: 1.5.0
