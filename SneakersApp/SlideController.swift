@@ -19,10 +19,15 @@ class SlideController: UIViewController {
         let scrollView: ImageScrollView = ImageScrollView()
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         scrollView.backgroundColor = .white
+        
         self.view = scrollView
         
         guard let image = self.image else {return}
         
         scrollView.displayImage(image)
+        
+        scrollView.placeImageInCenter()
     }
+    
+    
 }

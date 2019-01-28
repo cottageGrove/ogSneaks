@@ -18,6 +18,7 @@ class SneakersTableViewController: UITableViewController{
     fileprivate let cellId = "cellId"
     var fSneakers: [NSManagedObject] = []
     var sneakerImagesViewController: SneakerImagesViewController?
+    var coreDataImagesViewController : CoreDataImagesViewController?
 
 
     
@@ -46,6 +47,7 @@ class SneakersTableViewController: UITableViewController{
         
         setupTableView()
         setupSneakerImagesViewController()
+
         
 
     }
@@ -60,7 +62,7 @@ class SneakersTableViewController: UITableViewController{
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
-        sneakerImagesViewController = SneakerImagesViewController(collectionViewLayout: layout)
+        coreDataImagesViewController = CoreDataImagesViewController(collectionViewLayout: layout)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,7 +109,9 @@ class SneakersTableViewController: UITableViewController{
         let sneaker = sneakerContextObjects[indexPath.row]
         processImages(sneaker: sneaker)
         
-        self.navigationController?.pushViewController(self.sneakerImagesViewController!, animated: true)
+        self.coreDataImagesViewController?.updateData()
+        
+        self.navigationController?.pushViewController(self.coreDataImagesViewController!, animated: true)
         
     }
     
@@ -126,8 +130,8 @@ class SneakersTableViewController: UITableViewController{
             
         }
         
-        self.sneakerImagesViewController?.images = sneakerImagesArray
-        self.sneakerImagesViewController?.updateData()
+        self.coreDataImagesViewController?.images = sneakerImagesArray
+        self.coreDataImagesViewController?.updateData()
 
 
         

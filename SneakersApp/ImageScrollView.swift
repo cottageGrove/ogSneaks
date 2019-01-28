@@ -35,44 +35,46 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         super.layoutSubviews()
         
         // center the zoom view as it becomes smaller than the size of the screen
-//        let boundsSize: CGSize = self.bounds.size
-//        var frameToCenter: CGRect = self.imageView!.frame
+        let boundsSize: CGSize = self.bounds.size
+        var frameToCenter: CGRect = self.imageView!.frame
+
+        // center horizontally
+        if frameToCenter.size.width < boundsSize.width {
+            frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2
+
+        }
+        else {
+            frameToCenter.origin.x = 0
+        }
+
+        // center vertically
+        if (frameToCenter.size.height < boundsSize.height) {
+            frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2
+        }
+        else {
+            frameToCenter.origin.y = 0
+        }
 //
-//        // center horizontally
-//        if frameToCenter.size.width < boundsSize.width {
-//            frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2
 //
-//        }
-//        else {
-//            frameToCenter.origin.x = 0
-//        }
-//
-//        // center vertically
-//        if (frameToCenter.size.height < boundsSize.height) {
-//            frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2
-//        }
-//        else {
-//            frameToCenter.origin.y = 0
-//        }
-//
-//
-//        frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2
-//        frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2
-//
-//        self.imageView!.frame = frameToCenter
+        frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2
+        frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2
+
+        self.imageView!.frame = frameToCenter
         
 //        let resizedImage = resizeImage(image: image)
 //        self.imageView = UIImageView(image: resizedImage)
         
-        self.contentView?.translatesAutoresizingMaskIntoConstraints = false
+//        self.contentView?.translatesAutoresizingMaskIntoConstraints = false
         guard let contentView = self.contentView else {return}
         self.addSubview(contentView)
-        
-
-        self.contentView?.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.contentView?.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        self.contentView?.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        self.contentView?.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//
+////        self.contentView?.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//
+////        self.contentView?.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        self.contentView?.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        self.contentView?.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+//        self.contentView?.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+//        self.contentView?.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
         guard let imageView = self.imageView else {return}
         self.contentView?.addSubview(self.imageView!)
@@ -137,7 +139,8 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
     func configureImageSize(_ imageSize: CGSize) {
         
-        self.contentSize = self.contentView!.frame.size
+        self.contentSize = imageSize
+//        self.contentSize = self.contentView!.frame.size
 //        self.contentSize = imageSize
         self.zoomScale = self.minimumZoomScale
     }
@@ -155,6 +158,16 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         guard let imageView = self.imageView else {return}
         
         imageView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
+
+    }
+    
+    func placeImageInCenter() {
+        let offsetX: CGFloat = max((self.bounds.size.width - self.contentSize.width) * 0.5, 0.0)
+        let offsetY: CGFloat = max((self.bounds.size.height - self.contentSize.height) * 0.5, 0.0)
+        
+        guard let imageView = self.imageView else {return}
+        
+        imageView.center = CGPoint(x: self.contentSize.width * 0.5 + offsetX, y: self.contentSize.height * 0.5 + offsetY)
 
     }
 }

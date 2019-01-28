@@ -20,6 +20,7 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
     var listedSneakers = [CodableSneaker]()
     
     var sneakerImagesViewController : SneakerImagesViewController?
+
     
 //    var listedSneakers = [CodableSneaker]()
     
@@ -80,6 +81,7 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         sneakerImagesViewController = SneakerImagesViewController(collectionViewLayout: layout)
+
     }
     
     func setupSearchBar() {
@@ -147,8 +149,7 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
 
         }
         
-
-
+//        self.navigationController?.pushViewController(self.coreDataImagesViewController!, animated: true)
         self.navigationController?.pushViewController(self.sneakerImagesViewController!, animated: true)
         
                 

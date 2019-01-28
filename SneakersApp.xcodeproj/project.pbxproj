@@ -32,6 +32,7 @@
 		B4C5D96D21CD5C780058284E /* jordan1chi_side_image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D96921CD5C780058284E /* jordan1chi_side_image4.jpg */; };
 		B4C5D96E21CD5C780058284E /* jordan1chi_image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D96A21CD5C780058284E /* jordan1chi_image1.jpeg */; };
 		B4C5D96F21CD5C780058284E /* jordan1chi_side_image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D96B21CD5C780058284E /* jordan1chi_side_image2.jpg */; };
+		B4C8798621FBC135008035B5 /* CoreDataImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8798521FBC135008035B5 /* CoreDataImagesViewController.swift */; };
 		B4CC751921EE9DC5000C88CE /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CC751821EE9DC5000C88CE /* PageController.swift */; };
 		B4D5D71021D145B800FF6460 /* SneakerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4D5D70E21D145B800FF6460 /* SneakerModel.xcdatamodeld */; };
 		B4D5D71421D16D4E00FF6460 /* SneakerModelMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D5D71321D16D4E00FF6460 /* SneakerModelMO.swift */; };
@@ -39,6 +40,7 @@
 		B4E759F721D7D46800DC2F1F /* SneakerImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E759F521D7D46800DC2F1F /* SneakerImageCell.swift */; };
 		B4E759F821D7D46800DC2F1F /* SneakerImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E759F621D7D46800DC2F1F /* SneakerImageCell.xib */; };
 		B4E759FA21D97CE600DC2F1F /* SneakerImageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E759F921D97CE600DC2F1F /* SneakerImageMO.swift */; };
+		B4EC496821FE514700D5A512 /* TestImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EC496721FE514700D5A512 /* TestImageScrollView.swift */; };
 		F297A4515C77F2165F5115AB /* Pods_SneakersApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C0EEE39CDE0CE5F4CCFD50 /* Pods_SneakersApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,7 @@
 		B4C5D96921CD5C780058284E /* jordan1chi_side_image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jordan1chi_side_image4.jpg; sourceTree = "<group>"; };
 		B4C5D96A21CD5C780058284E /* jordan1chi_image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jordan1chi_image1.jpeg; sourceTree = "<group>"; };
 		B4C5D96B21CD5C780058284E /* jordan1chi_side_image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jordan1chi_side_image2.jpg; sourceTree = "<group>"; };
+		B4C8798521FBC135008035B5 /* CoreDataImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImagesViewController.swift; sourceTree = "<group>"; };
 		B4CC751821EE9DC5000C88CE /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		B4D5D70F21D145B800FF6460 /* SneakerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SneakerModel.xcdatamodel; sourceTree = "<group>"; };
 		B4D5D71321D16D4E00FF6460 /* SneakerModelMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakerModelMO.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		B4E759F521D7D46800DC2F1F /* SneakerImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakerImageCell.swift; sourceTree = "<group>"; };
 		B4E759F621D7D46800DC2F1F /* SneakerImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SneakerImageCell.xib; sourceTree = "<group>"; };
 		B4E759F921D97CE600DC2F1F /* SneakerImageMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakerImageMO.swift; sourceTree = "<group>"; };
+		B4EC496721FE514700D5A512 /* TestImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +143,9 @@
 				B432C0C621CC7A09008E7E1A /* SneakersTableViewController.swift */,
 				B405B12221D30CC4002B5244 /* SneakerListingsViewController.swift */,
 				B4C5D96521CD57750058284E /* ImageUploadViewController.swift */,
+				B4C8798521FBC135008035B5 /* CoreDataImagesViewController.swift */,
 				B4E759F121D7CD6F00DC2F1F /* SneakerImagesViewController.swift */,
+				B4EC496721FE514700D5A512 /* TestImageScrollView.swift */,
 				B4D5D70B21D1233800FF6460 /* Model */,
 				B4D5D70921D122E500FF6460 /* Views */,
 				B4C5D96721CD5C630058284E /* sneaker_images */,
@@ -331,6 +337,7 @@
 				B4E759FA21D97CE600DC2F1F /* SneakerImageMO.swift in Sources */,
 				B432C0C721CC7A09008E7E1A /* SneakersTableViewController.swift in Sources */,
 				B432C0CA21CC7BDC008E7E1A /* SneakerCell.swift in Sources */,
+				B4EC496821FE514700D5A512 /* TestImageScrollView.swift in Sources */,
 				B4D5D71021D145B800FF6460 /* SneakerModel.xcdatamodeld in Sources */,
 				B44DC4EA21CC337400663407 /* SneakerEntryView.swift in Sources */,
 				B4967AD421CAA59000C169AC /* AppDelegate.swift in Sources */,
@@ -339,6 +346,7 @@
 				B4CC751921EE9DC5000C88CE /* PageController.swift in Sources */,
 				B433723821F13C7500A6E62A /* ImageScrollView.swift in Sources */,
 				B433723621F136FC00A6E62A /* SlideController.swift in Sources */,
+				B4C8798621FBC135008035B5 /* CoreDataImagesViewController.swift in Sources */,
 				B405B12321D30CC4002B5244 /* SneakerListingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,7 +497,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PVBK5JR278;
 				INFOPLIST_FILE = SneakersApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.raf.SneakersApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -505,7 +516,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PVBK5JR278;
 				INFOPLIST_FILE = SneakersApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.raf.SneakersApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

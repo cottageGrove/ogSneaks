@@ -410,9 +410,14 @@ class ImageUploadViewController: UIViewController, UIImagePickerControllerDelega
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        
+        
         if let image =  info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
 
             self.sneakerImage = image
+//            self.loadImageViewer()
+            self.loadImageScrollView()
+            
             self.imageView?.image = image
             
         }
@@ -430,6 +435,79 @@ class ImageUploadViewController: UIViewController, UIImagePickerControllerDelega
     @IBAction func onBulkTapped() {
         
     }
+    
+    func loadImageViewer() {
+        
+        
+        var slideShowController = SlideShowController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        
+        var images = [UIImage]()
+        guard let sneakerImage = self.sneakerImage else {return}
+        images.append(sneakerImage)
+        
+        slideShowController.images = images
+        
+        
+        let slideController = SlideController()
+        
+        slideController.image = sneakerImage
+
+        
+        //        slideShowController.updateImages(images: self.images)
+//        self.navigationController?.pushViewController(slideShowController, animated: true)
+        
+        let window = UIApplication.shared.keyWindow
+        
+        
+//        let slideController = SlideController()
+//        slideController.image = self.sneakerImage
+        
+//        slideController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+//        slideController.view.center = self.view.center
+//        slideController.view.backgroundColor = .purple
+        
+//        slideController.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        slideController.view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        
+
+        self.navigationController?.pushViewController(slideController, animated: true)
+        
+        
+        
+        
+    
+//        self.navigationController?.pushViewController(imageScrollView, animated: true)
+//        self.view.addSubview(imageScrollView)
+    }
+    
+    func loadImageScrollView() {
+        let scrollView = TestImageScrollView()
+        scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        scrollView.backgroundColor = .white
+        
+        
+
+        
+        let imageViewController = UIViewController()
+        imageViewController.view = scrollView
+        
+        
+        guard let image = self.sneakerImage else {return}
+        scrollView.addImage(image: image)
+        
+//
+//        let width = scrollView.contentView!.bounds.width / 2
+//        let height = scrollView.contentView!.bounds.height / 2
+//
+//        let centerPoint = CGPoint(x: width, y: height)
+//        scrollView.contentView!.center = centerPoint
+        
+        self.navigationController?.pushViewController(imageViewController, animated: true)
+    
+        
+    }
+    
     
     func getSneakerImage(images: [UIImage]){
         
@@ -449,10 +527,10 @@ class ImageUploadViewController: UIViewController, UIImagePickerControllerDelega
         for (index, image) in images.enumerated() {
             
             let sneakerImageMO = NSEntityDescription.insertNewObject(forEntityName: "SneakerImage", into: managedObjectContext) as! SneakerImageMO
-
             
+            let imageData = image.jpegData(compressionQuality: 1.0)
             
-            sneakerImageMO.image = image.pngData()
+            sneakerImageMO.image = imageData
 //            sneakerImageMO.url = "unassigned"
             
             self.sneakerImagesMO.insert(sneakerImageMO, at: index)

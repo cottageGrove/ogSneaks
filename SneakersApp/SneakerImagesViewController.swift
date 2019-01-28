@@ -98,9 +98,10 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
 
         slideShowController.images = self.images
         
-        
 //        slideShowController.updateImages(images: self.images)
         self.navigationController?.pushViewController(slideShowController, animated: true)
+        
+        
 
     }
     

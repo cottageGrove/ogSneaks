@@ -21,25 +21,30 @@ class SneakerImageCell: UICollectionViewCell {
     }
     
     
-//    var sneakerImage: UIImage! {
-//        didSet {
-//
-//            sneakerImageView.contentMode = .scaleAspectFit
-//
-//            guard let compressedData = sneakerImage.jpegData(compressionQuality: 0.05) else {return}
-//            sneakerImageView.image = UIImage(data: compressedData)
-//        }
-//    }
+    var sneakerImage: UIImage! {
+        didSet {
+
+            sneakerImageView.contentMode = .scaleAspectFit
+
+            
+            guard let compressedData = sneakerImage.jpegData(compressionQuality: 0.00) else {return}
+            
+            sneakerImageView.image = UIImage(data: compressedData)
+        }
+    }
     
     var codableSneakerImage : CodableSneakerImage! {
         
         didSet {
             print("Are we entering the codableImageURL???")
-            self.sneakerImageView.contentMode = .scaleAspectFit
+//            self.sneakerImageView.contentMode = .scaleAspectFit
+            
+            self.sneakerImageView.contentMode = .scaleAspectFill
             
             guard let imageUrl = codableSneakerImage.image_url else {return}
             
             guard let url = URL(string: imageUrl) else {return}
+            
             self.sneakerImageView.sd_setImage(with: url, completed: nil)
         }
     }
