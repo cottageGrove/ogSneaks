@@ -25,7 +25,7 @@ class TestImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.maximumZoomScale = 4.0
         self.minimumZoomScale = 1
         
-        self.backgroundColor = .purple
+//        self.backgroundColor = .purple
 
     }
     
@@ -93,7 +93,6 @@ class TestImageScrollView: UIScrollView, UIScrollViewDelegate {
 //        self.contentSize = CGSize(width:imageView!.bounds.width, height: imageView!.bounds.height)
         self.contentSize = contentView!.frame.size
         
-        self.contentView?.backgroundColor = .purple
         
         self.imageView?.image = image
         

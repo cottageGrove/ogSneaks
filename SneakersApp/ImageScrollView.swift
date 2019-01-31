@@ -116,6 +116,8 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     func resizeImage(image: UIImage) -> UIImage {
         let size = image.size
         
+        print("Size ", image.size)
+        
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         let screenWidth = screenSize.width
@@ -125,13 +127,17 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         
         let newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
         
-        
         let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+    
+
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
         image.draw(in: rect)
         
+//        if let image =
         let newImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+
+
         
         return newImage
         

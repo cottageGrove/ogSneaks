@@ -50,6 +50,29 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     }
     
     
+    //need to modify this to figure out how they use the ebay animation
+//    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//
+//        let cells = collectionView.visibleCells
+//        var delayCounter = 0
+//
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! SneakerImageCell
+//        for cell in cells {
+//
+//            cell.transform = CGAffineTransform(translationX: collectionView.bounds.size.width, y: 0)
+//
+//            UIView.animate(withDuration: 1.6, delay: 0.08 * Double(delayCounter), options: .curveEaseIn, animations: {
+//
+//
+//                cell.transform = CGAffineTransform.identity
+//            }, completion: nil)
+//            delayCounter += 1
+//
+//        }
+//
+//
+//    }
+
     
     func setupImageDetailView() {
         
@@ -97,6 +120,7 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
         var slideShowController = SlideShowController(transitionStyle: .scroll, navigationOrientation: .horizontal)
 
         slideShowController.images = self.images
+        
         
 //        slideShowController.updateImages(images: self.images)
         self.navigationController?.pushViewController(slideShowController, animated: true)
@@ -150,20 +174,18 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
         let codableSneakerImageUrl = self.sneakerImageUrls[indexPath.row]
         
  
-        
-        
         print("This is the image url \(codableSneakerImageUrl.image_url)")
         cell.codableSneakerImage = codableSneakerImageUrl
         
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sneakerImage = images[indexPath.row]
-        self.sneakerImageIndex = indexPath.row
-        openPhotoPicker()
-    }
-    
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let sneakerImage = images[indexPath.row]
+//        self.sneakerImageIndex = indexPath.row
+//        openPhotoPicker()
+//    }
+//
     
 
     
@@ -195,6 +217,58 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
         return sneakerImageUrls.count
 //        return images.count
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 140 , height: 140)
+        
+        collectionView.setCollectionViewLayout(layout, animated: true)
+        
+        let imageUrl = self.sneakerImageUrls[indexPath.row]
+        
+        let selectedImage = self.images[indexPath.row]
+        
+
+        print("Did SelectItemAt \(imageUrl.image_url!)")
+        
+        var newImage = UIImage()
+        let slideController = SlideController()
+//        convertUrlToImage(url: imageUrl.image_url!) { (image) in
+//            print("Image Selected \(image)")
+//            newImage = image
+//
+//
+//            slideController.image = newImage
+//            slideController.itemIndex = 0
+//
+//
+//
+//
+//        }
+//        self.navigationController?.pushViewController(slideController, animated: false)
+        
+                let window = UIApplication.shared.keyWindow
+        
+        let screenSize = UIScreen.main.bounds.size
+        
+        let imageView = UIImageView(frame: self.view.frame)
+        imageView.image = selectedImage
+        imageView.frame = self.view.frame
+//
+        slideController.image = selectedImage
+        
+        self.present(slideController, animated: true, completion: nil)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+//        imageView.frame = self.view.frame
+//        window?.addSubview(imageView)
+//
+//        
+    
+    }
+    
+
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -238,6 +312,20 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     func removeAllSneakers() {
         self.images.removeAll()
     }
+    
+    func convertUrlToImage(url: String, completionHandler: @escaping (UIImage)->()) {
+        
+        
+        guard let url = URL(string: url) else {return}
+        
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
+            guard let data = data else {return}
+            guard let image = UIImage(data: data) else {return}
+            completionHandler(image)
+        }).resume()
+    
+    }
+    
     
     func convertUrlsToImages(completionHandler: @escaping ([UIImage])->()) {
         
