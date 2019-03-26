@@ -19,3 +19,10 @@ Run pod install before you run the application to install AWS and SDWebImage dep
   <img src="/screenshot1.png" width="400px"</img> 
   <img src="/screenshot2.png" width="400px"</img>
 </div>
+
+
+<style type="text/css">
+ul {
+list-style-type: none;
+}
+</style>
