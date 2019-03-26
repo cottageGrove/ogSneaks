@@ -7,13 +7,6 @@ Think of it as a sneaker closet :)
 
 Run pod install before you run the application to install AWS and SDWebImage dependencies
 
-<ul style="list-style: none;">
-    <li>pod 'AWSCore'</li>
-    <li>pod 'AWSCognito'</li>
-    <li>pod 'AWSS3'</li>
-    <li>pod 'SDWebImage', '~> 4.0'</li>
-</ul>
-
 - pod 'AWSCore'
 - pod 'AWSCognito'
 - pod 'AWSS3'
