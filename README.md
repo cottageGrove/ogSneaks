@@ -14,6 +14,11 @@ Run pod install before you run the application to install AWS and SDWebImage dep
     <li>pod 'SDWebImage', '~> 4.0'</li>
 </ul>
 
+- pod 'AWSCore'
+- pod 'AWSCognito'
+- pod 'AWSS3'
+- pod 'SDWebImage'
+
 
 <div align="center">
   <img src="/screenshot1.png" width="400px"</img> 
@@ -21,8 +26,3 @@ Run pod install before you run the application to install AWS and SDWebImage dep
 </div>
 
 
-<style type="text/css">
-ul {
-list-style-type: none;
-}
-</style>
