@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import AVKit
+
 
 class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
@@ -175,5 +177,7 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         
         imageView.center = CGPoint(x: self.contentSize.width * 0.5 + offsetX, y: self.contentSize.height * 0.5 + offsetY)
 
+        
+        
     }
 }

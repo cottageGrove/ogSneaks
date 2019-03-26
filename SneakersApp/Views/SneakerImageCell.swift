@@ -30,6 +30,8 @@ class SneakerImageCell: UICollectionViewCell {
             guard let compressedData = sneakerImage.jpegData(compressionQuality: 0.00) else {return}
             
             sneakerImageView.image = UIImage(data: compressedData)
+//            sneakerImageView.layer.cornerRadius = 5.0
+//            sneakerImageView.layer.masksToBounds = true
         }
     }
     
@@ -46,6 +48,8 @@ class SneakerImageCell: UICollectionViewCell {
             guard let url = URL(string: imageUrl) else {return}
             
             self.sneakerImageView.sd_setImage(with: url, completed: nil)
+//            sneakerImageView.layer.cornerRadius = 5.0
+//            sneakerImageView.layer.masksToBounds = true
         }
     }
     

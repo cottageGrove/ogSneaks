@@ -112,6 +112,11 @@ class SneakerListingsViewController : UITableViewController, UISearchBarDelegate
         let sneaker = self.listedSneakers[indexPath.row]
         print("Current Sneaker Selected \(sneaker)")
         
+        
+        
+        
+        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        
         guard let id = sneaker.id else {return}
         
 //        NetworkLayer.shared.fetchSneakerImages(sneakerId: id) { (sneakerImages) in

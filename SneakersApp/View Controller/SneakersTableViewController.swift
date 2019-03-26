@@ -48,8 +48,6 @@ class SneakersTableViewController: UITableViewController{
         setupTableView()
         setupSneakerImagesViewController()
 
-        
-
     }
     
     func setupTableView() {
@@ -109,8 +107,12 @@ class SneakersTableViewController: UITableViewController{
         let sneaker = sneakerContextObjects[indexPath.row]
         processImages(sneaker: sneaker)
         
+        
+        
         self.coreDataImagesViewController?.updateData()
         
+        
+        //Will update this back to what it was
         self.navigationController?.pushViewController(self.coreDataImagesViewController!, animated: true)
         
     }
@@ -152,7 +154,6 @@ class SneakersTableViewController: UITableViewController{
 //        return cell
     
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SneakerCell
-        
         
         let savedSneaker = sneakerContextObjects[indexPath.row]
         

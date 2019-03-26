@@ -53,9 +53,7 @@ class ViewController: UIViewController {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedObjectContext = appDelegate.persistentContainer.viewContext
-        
         let sneakersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "SneakerModel")
-        
         var fetchedSneakers : [Any]?
         
         do {

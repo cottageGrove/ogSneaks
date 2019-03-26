@@ -19,13 +19,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="496" height="145.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ttf-lR-OiH">
-                        <rect key="frame" x="20" y="26" width="94" height="94"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="94" id="KBf-Q7-c88"/>
-                            <constraint firstAttribute="height" constant="94" id="hvp-51-5Qz"/>
-                        </constraints>
-                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="NFJ-CA-vsO">
                         <rect key="frame" x="133" y="23" width="230" height="99.5"/>
                         <subviews>
@@ -65,13 +58,21 @@
                             <constraint firstAttribute="height" constant="99.5" id="fzh-uW-8T7"/>
                         </constraints>
                     </stackView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ttf-lR-OiH">
+                        <rect key="frame" x="15" y="17" width="110" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="KBf-Q7-c88"/>
+                            <constraint firstAttribute="height" constant="110" id="hvp-51-5Qz"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="NFJ-CA-vsO" firstAttribute="leading" secondItem="Ttf-lR-OiH" secondAttribute="trailing" constant="19" id="0oG-dY-LRd"/>
-                    <constraint firstItem="Ttf-lR-OiH" firstAttribute="leading" secondItem="Jyu-PL-V1f" secondAttribute="leading" constant="20" id="Elh-az-h87"/>
                     <constraint firstAttribute="bottom" secondItem="NFJ-CA-vsO" secondAttribute="bottom" constant="23" id="I9a-8f-Wa6"/>
+                    <constraint firstItem="Ttf-lR-OiH" firstAttribute="top" secondItem="Jyu-PL-V1f" secondAttribute="top" constant="17" id="JD4-vm-8TN"/>
+                    <constraint firstItem="Ttf-lR-OiH" firstAttribute="leading" secondItem="Jyu-PL-V1f" secondAttribute="leading" constant="15" id="Wp0-lZ-XJI"/>
+                    <constraint firstAttribute="bottom" secondItem="Ttf-lR-OiH" secondAttribute="bottom" constant="18.5" id="Z0s-Ob-sUK"/>
                     <constraint firstItem="NFJ-CA-vsO" firstAttribute="top" secondItem="Jyu-PL-V1f" secondAttribute="top" constant="23" id="dOo-Bh-qqs"/>
-                    <constraint firstItem="Ttf-lR-OiH" firstAttribute="top" secondItem="Jyu-PL-V1f" secondAttribute="top" constant="26" id="rsd-vk-K3i"/>
+                    <constraint firstItem="NFJ-CA-vsO" firstAttribute="leading" secondItem="Ttf-lR-OiH" secondAttribute="trailing" constant="8" id="fIy-9X-g8y"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="PEv-R2-LyM"/>

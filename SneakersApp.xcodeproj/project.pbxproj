@@ -19,6 +19,8 @@
 		B44DC4E821CC330C00663407 /* SneakerEntryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44DC4E721CC330C00663407 /* SneakerEntryView.xib */; };
 		B44DC4EA21CC337400663407 /* SneakerEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44DC4E921CC337400663407 /* SneakerEntryView.swift */; };
 		B44DC4EC21CC412500663407 /* SneakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44DC4EB21CC412500663407 /* SneakersViewController.swift */; };
+		B4604D1F2249B78500211E39 /* screenshot1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4604D1E2249B78500211E39 /* screenshot1.png */; };
+		B4604D212249B81200211E39 /* screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4604D202249B81200211E39 /* screenshot2.png */; };
 		B478A69421F65959004D3781 /* CodableSneakerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B478A69321F65959004D3781 /* CodableSneakerImage.swift */; };
 		B4967AD421CAA59000C169AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4967AD321CAA59000C169AC /* AppDelegate.swift */; };
 		B4967AD621CAA59000C169AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4967AD521CAA59000C169AC /* ViewController.swift */; };
@@ -27,6 +29,11 @@
 		B4967ADE21CAA59300C169AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4967ADC21CAA59300C169AC /* LaunchScreen.storyboard */; };
 		B4967AE621CAA5F300C169AC /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4967AE521CAA5F300C169AC /* NetworkLayer.swift */; };
 		B4967AE821CAA88000C169AC /* Sneaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4967AE721CAA88000C169AC /* Sneaker.swift */; };
+		B4AE97C02204F9EB005D23AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AE97BF2204F9EB005D23AF /* AppDelegate.swift */; };
+		B4AE97C22204F9EB005D23AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AE97C12204F9EB005D23AF /* ViewController.swift */; };
+		B4AE97C52204F9EB005D23AF /* SneakersApp_mac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4AE97C32204F9EB005D23AF /* SneakersApp_mac.xcdatamodeld */; };
+		B4AE97C72204F9EC005D23AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4AE97C62204F9EC005D23AF /* Assets.xcassets */; };
+		B4AE97CA2204F9EC005D23AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4AE97C82204F9EC005D23AF /* Main.storyboard */; };
 		B4C5D96621CD57750058284E /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5D96521CD57750058284E /* ImageUploadViewController.swift */; };
 		B4C5D96C21CD5C780058284E /* jordan1chi_side_image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D96821CD5C780058284E /* jordan1chi_side_image3.jpg */; };
 		B4C5D96D21CD5C780058284E /* jordan1chi_side_image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D96921CD5C780058284E /* jordan1chi_side_image4.jpg */; };
@@ -60,6 +67,8 @@
 		B44DC4E721CC330C00663407 /* SneakerEntryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SneakerEntryView.xib; sourceTree = "<group>"; };
 		B44DC4E921CC337400663407 /* SneakerEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakerEntryView.swift; sourceTree = "<group>"; };
 		B44DC4EB21CC412500663407 /* SneakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersViewController.swift; sourceTree = "<group>"; };
+		B4604D1E2249B78500211E39 /* screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1.png; sourceTree = "<group>"; };
+		B4604D202249B81200211E39 /* screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot2.png; sourceTree = "<group>"; };
 		B478A69321F65959004D3781 /* CodableSneakerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableSneakerImage.swift; sourceTree = "<group>"; };
 		B4967AD021CAA59000C169AC /* SneakersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4967AD321CAA59000C169AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +79,14 @@
 		B4967ADF21CAA59300C169AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4967AE521CAA5F300C169AC /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		B4967AE721CAA88000C169AC /* Sneaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneaker.swift; sourceTree = "<group>"; };
+		B4AE97BD2204F9EB005D23AF /* SneakersApp-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SneakersApp-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4AE97BF2204F9EB005D23AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4AE97C12204F9EB005D23AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4AE97C42204F9EB005D23AF /* SneakersApp_mac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SneakersApp_mac.xcdatamodel; sourceTree = "<group>"; };
+		B4AE97C62204F9EC005D23AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4AE97C92204F9EC005D23AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4AE97CB2204F9EC005D23AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4AE97CC2204F9EC005D23AF /* SneakersApp_mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SneakersApp_mac.entitlements; sourceTree = "<group>"; };
 		B4C5D96521CD57750058284E /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 		B4C5D96821CD5C780058284E /* jordan1chi_side_image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jordan1chi_side_image3.jpg; sourceTree = "<group>"; };
 		B4C5D96921CD5C780058284E /* jordan1chi_side_image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jordan1chi_side_image4.jpg; sourceTree = "<group>"; };
@@ -92,6 +109,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F297A4515C77F2165F5115AB /* Pods_SneakersApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4AE97BA2204F9EB005D23AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +142,10 @@
 		B4967AC721CAA59000C169AC = {
 			isa = PBXGroup;
 			children = (
+				B4604D1E2249B78500211E39 /* screenshot1.png */,
+				B4604D202249B81200211E39 /* screenshot2.png */,
 				B4967AD221CAA59000C169AC /* SneakersApp */,
+				B4AE97BE2204F9EB005D23AF /* SneakersApp-mac */,
 				B4967AD121CAA59000C169AC /* Products */,
 				5E8E7CDAA6D7E14EC21AE9DE /* Pods */,
 				779C64C7B1259B12178B1BA1 /* Frameworks */,
@@ -129,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B4967AD021CAA59000C169AC /* SneakersApp.app */,
+				B4AE97BD2204F9EB005D23AF /* SneakersApp-mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,15 +164,9 @@
 		B4967AD221CAA59000C169AC /* SneakersApp */ = {
 			isa = PBXGroup;
 			children = (
+				B4B78CF6222EE47800F5407F /* View Controller */,
 				B4967AD721CAA59000C169AC /* Main.storyboard */,
 				B4967ADA21CAA59300C169AC /* Assets.xcassets */,
-				B4967AD521CAA59000C169AC /* ViewController.swift */,
-				B44DC4EB21CC412500663407 /* SneakersViewController.swift */,
-				B432C0C621CC7A09008E7E1A /* SneakersTableViewController.swift */,
-				B405B12221D30CC4002B5244 /* SneakerListingsViewController.swift */,
-				B4C5D96521CD57750058284E /* ImageUploadViewController.swift */,
-				B4C8798521FBC135008035B5 /* CoreDataImagesViewController.swift */,
-				B4E759F121D7CD6F00DC2F1F /* SneakerImagesViewController.swift */,
 				B4EC496721FE514700D5A512 /* TestImageScrollView.swift */,
 				B4D5D70B21D1233800FF6460 /* Model */,
 				B4D5D70921D122E500FF6460 /* Views */,
@@ -160,6 +182,34 @@
 				B433723521F136FC00A6E62A /* SlideController.swift */,
 			);
 			path = SneakersApp;
+			sourceTree = "<group>";
+		};
+		B4AE97BE2204F9EB005D23AF /* SneakersApp-mac */ = {
+			isa = PBXGroup;
+			children = (
+				B4AE97BF2204F9EB005D23AF /* AppDelegate.swift */,
+				B4AE97C12204F9EB005D23AF /* ViewController.swift */,
+				B4AE97C62204F9EC005D23AF /* Assets.xcassets */,
+				B4AE97C82204F9EC005D23AF /* Main.storyboard */,
+				B4AE97CB2204F9EC005D23AF /* Info.plist */,
+				B4AE97CC2204F9EC005D23AF /* SneakersApp_mac.entitlements */,
+				B4AE97C32204F9EB005D23AF /* SneakersApp_mac.xcdatamodeld */,
+			);
+			path = "SneakersApp-mac";
+			sourceTree = "<group>";
+		};
+		B4B78CF6222EE47800F5407F /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4967AD521CAA59000C169AC /* ViewController.swift */,
+				B44DC4EB21CC412500663407 /* SneakersViewController.swift */,
+				B432C0C621CC7A09008E7E1A /* SneakersTableViewController.swift */,
+				B405B12221D30CC4002B5244 /* SneakerListingsViewController.swift */,
+				B4C5D96521CD57750058284E /* ImageUploadViewController.swift */,
+				B4C8798521FBC135008035B5 /* CoreDataImagesViewController.swift */,
+				B4E759F121D7CD6F00DC2F1F /* SneakerImagesViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		B4C5D96721CD5C630058284E /* sneaker_images */ = {
@@ -221,6 +271,23 @@
 			productReference = B4967AD021CAA59000C169AC /* SneakersApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B4AE97BC2204F9EB005D23AF /* SneakersApp-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4AE97CF2204F9EC005D23AF /* Build configuration list for PBXNativeTarget "SneakersApp-mac" */;
+			buildPhases = (
+				B4AE97B92204F9EB005D23AF /* Sources */,
+				B4AE97BA2204F9EB005D23AF /* Frameworks */,
+				B4AE97BB2204F9EB005D23AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SneakersApp-mac";
+			productName = "SneakersApp-mac";
+			productReference = B4AE97BD2204F9EB005D23AF /* SneakersApp-mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -232,6 +299,9 @@
 				ORGANIZATIONNAME = Rafae;
 				TargetAttributes = {
 					B4967ACF21CAA59000C169AC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B4AE97BC2204F9EB005D23AF = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -250,6 +320,7 @@
 			projectRoot = "";
 			targets = (
 				B4967ACF21CAA59000C169AC /* SneakersApp */,
+				B4AE97BC2204F9EB005D23AF /* SneakersApp-mac */,
 			);
 		};
 /* End PBXProject section */
@@ -262,14 +333,25 @@
 				B44DC4E821CC330C00663407 /* SneakerEntryView.xib in Resources */,
 				B4E759F821D7D46800DC2F1F /* SneakerImageCell.xib in Resources */,
 				B4967ADE21CAA59300C169AC /* LaunchScreen.storyboard in Resources */,
+				B4604D1F2249B78500211E39 /* screenshot1.png in Resources */,
 				B432C0CB21CC7BDC008E7E1A /* SneakerCell.xib in Resources */,
 				B4967ADB21CAA59300C169AC /* Assets.xcassets in Resources */,
 				B4967AD921CAA59000C169AC /* Main.storyboard in Resources */,
 				B4C5D96E21CD5C780058284E /* jordan1chi_image1.jpeg in Resources */,
+				B4604D212249B81200211E39 /* screenshot2.png in Resources */,
 				B405B12B21D3107F002B5244 /* ListedSneakerCell.xib in Resources */,
 				B4C5D96C21CD5C780058284E /* jordan1chi_side_image3.jpg in Resources */,
 				B4C5D96F21CD5C780058284E /* jordan1chi_side_image2.jpg in Resources */,
 				B4C5D96D21CD5C780058284E /* jordan1chi_side_image4.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4AE97BB2204F9EB005D23AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4AE97C72204F9EC005D23AF /* Assets.xcassets in Resources */,
+				B4AE97CA2204F9EC005D23AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +433,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4AE97B92204F9EB005D23AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4AE97C52204F9EB005D23AF /* SneakersApp_mac.xcdatamodeld in Sources */,
+				B4AE97C22204F9EB005D23AF /* ViewController.swift in Sources */,
+				B4AE97C02204F9EB005D23AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -368,6 +460,14 @@
 				B4967ADD21CAA59300C169AC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B4AE97C82204F9EC005D23AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4AE97C92204F9EC005D23AF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -527,6 +627,50 @@
 			};
 			name = Release;
 		};
+		B4AE97CD2204F9EC005D23AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SneakersApp-mac/SneakersApp_mac.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PVBK5JR278;
+				INFOPLIST_FILE = "SneakersApp-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raf.SneakersApp-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		B4AE97CE2204F9EC005D23AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SneakersApp-mac/SneakersApp_mac.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PVBK5JR278;
+				INFOPLIST_FILE = "SneakersApp-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raf.SneakersApp-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,9 +692,28 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B4AE97CF2204F9EC005D23AF /* Build configuration list for PBXNativeTarget "SneakersApp-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4AE97CD2204F9EC005D23AF /* Debug */,
+				B4AE97CE2204F9EC005D23AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		B4AE97C32204F9EB005D23AF /* SneakersApp_mac.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B4AE97C42204F9EB005D23AF /* SneakersApp_mac.xcdatamodel */,
+			);
+			currentVersion = B4AE97C42204F9EB005D23AF /* SneakersApp_mac.xcdatamodel */;
+			path = SneakersApp_mac.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		B4D5D70E21D145B800FF6460 /* SneakerModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

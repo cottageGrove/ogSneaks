@@ -151,8 +151,6 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
     
     override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: layout)
-
-
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -172,6 +170,7 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
 //
         
         let codableSneakerImageUrl = self.sneakerImageUrls[indexPath.row]
+        
         
  
         print("This is the image url \(codableSneakerImageUrl.image_url)")
@@ -226,8 +225,11 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
         collectionView.setCollectionViewLayout(layout, animated: true)
         
         let imageUrl = self.sneakerImageUrls[indexPath.row]
+        var selectedImage : UIImage = UIImage()
         
-        let selectedImage = self.images[indexPath.row]
+        selectedImage = self.images[indexPath.row]
+
+        
         
 
         print("Did SelectItemAt \(imageUrl.image_url!)")
@@ -248,7 +250,7 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
 //        }
 //        self.navigationController?.pushViewController(slideController, animated: false)
         
-                let window = UIApplication.shared.keyWindow
+        let window = UIApplication.shared.keyWindow
         
         let screenSize = UIScreen.main.bounds.size
         
@@ -259,7 +261,7 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
         slideController.image = selectedImage
         
         self.present(slideController, animated: true, completion: nil)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         
 //        imageView.frame = self.view.frame
 //        window?.addSubview(imageView)
@@ -267,8 +269,6 @@ class SneakerImagesViewController: UICollectionViewController, UICollectionViewD
 //        
     
     }
-    
-
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
